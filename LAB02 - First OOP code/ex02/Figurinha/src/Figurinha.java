@@ -44,6 +44,16 @@ public class Figurinha {
     public String getPais() {
         return pais;
     }
+
+    public void printFig(){
+        System.out.println("Nome: " + getNome());
+        System.out.println("Data de nascimento: " + getData());
+        System.out.println("Altura: " + getAltura());
+        System.out.println("Peso: " + getPeso());
+        System.out.println("Posição: " + getPosicao());
+        System.out.println("País: " + getPais());
+        System.out.println("\n");
+    }
     
 }
 
