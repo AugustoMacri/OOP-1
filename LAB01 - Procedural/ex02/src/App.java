@@ -1,62 +1,61 @@
 import java.util.Scanner;
 
-public class App {
-
-    
+public class App{
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        Produtos[] produtos = new Produtos[4];
+        float[] vet = new float[4];
+
         
-       Scanner sc = new Scanner(System.in);
 
-        String nome[] = new String[4]; // new String[4][100]
-        float preco[] = new float[4];
-        int qnt_estoque[] = new int[4];        
-
-        for(int i = 0; i < 4; i++){
+        for(int i=0; i<4; i++){
+            produtos[i] = new Produtos();
+            
             System.out.println("Informe o nome, o preco e a qnt. em estoque do produto:");
-            nome[i] = sc.nextLine();
-            preco[i] = sc.nextFloat();
-            qnt_estoque[i] = sc.nextInt();
-
+            produtos[i].setNome(sc.nextLine());
+            produtos[i].setPreco(sc.nextFloat());
+            produtos[i].setQuant(sc.nextInt());
             sc.nextLine();          //Limpar o buffer
-
+            
         }
+        
+        //acessar o preco do primeiro item colocado produtos[0].getPreco()
+        System.out.println("");
+        System.out.println("Aumentando o preco em 10% do produto 1 e 3 ");
+        //As variaveis x e y irao salvar o o valor que sera aumentado
+        vet[0] = produtos[0].altera_preco(produtos[0].getPreco(), -110);
+        vet[2] = produtos[2].altera_preco(produtos[2].getPreco(), 10);
 
-        System.out.println("Aumentando o preco em 10% do produto 1 e 3 \n");
-       preco[0] = altera_preco(preco[0], -110);
-       preco[2] = altera_preco(preco[2], 10);
+        System.out.printf("%f", vet[0]);
 
         System.out.println("Reduzindo o preco em 5% do produto 2\n");
-            if(altera_preco(preco[1], -5) == -1){
+            if(produtos[1].altera_preco(produtos[1].getPreco(), -5) == -1){
             System.out.println("Erro: preco nao alterado. Porcentagem invalida\n");
         }else{
             System.out.println("Preco alterado com sucesso\n");
+            vet[1] = produtos[1].altera_preco(produtos[1].getPreco(), -5);
         }
 
-        System.out.println("Alterado o preco do prod. 3\n");
+        System.out.println("Alterado o preco do prod. 3");
 
-        if(altera_preco(preco[3], -110) == -1)
-        System.out.println("Erro: preco nao alterado. Porecentagem invalida\n");
+        if(produtos[3].altera_preco(produtos[3].getPreco(), -110) == -1){
+        System.out.println("Erro: preco nao alterado. Porecentagem invalida");
+        }else { 
+        System.out.printf("\n\n Preco alterado com sucesso");
+        vet[3] = (produtos[3].altera_preco(produtos[3].getPreco(), -110));
+        }
+
+
 
         System.out.println("Produtos Cadastrados");
 
         for(int i = 0; i < 4; i++){
-            System.out.println("Produto: " + nome[i] + "\n Preco: "+ preco[i] + "\nEstoque: " + qnt_estoque[i]);
+            System.out.println("Produto: " + produtos[i].getNome() + "\n Preco: "+ vet[i] + "\nEstoque: " + produtos[i].getQuant());
         }
 
-
-        sc.close();
-        
     }
-    public static float altera_preco(float preco, float porcentagem){ 
-        float temp;
-
-        if(porcentagem > -100){
-            temp = 1 + porcentagem/100;
-            return (preco*temp);
-        }else{
-            return preco;
-        }
-        
-    }
-    
 }
+
+
+
