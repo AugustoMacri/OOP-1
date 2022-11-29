@@ -7,7 +7,8 @@ public class C2 extends C1{
         System.out.println("Classe C2: Chamada do construtor padrao, sem parametros");
     }
 
-    public C2(int a, int b, int c){
+    public C2(int x, int y, int z, int a, int b, int c){
+        super(x,y,z);
         this.a = a;
         this.b = b;
         this.c = c;

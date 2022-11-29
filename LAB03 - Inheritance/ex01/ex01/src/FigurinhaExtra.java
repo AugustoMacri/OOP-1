@@ -1,4 +1,4 @@
-public class FigurinhasExtra {
+public class FigurinhaExtra {
     private String nome;
     private String data;
     private float altura;
@@ -8,7 +8,7 @@ public class FigurinhasExtra {
     private String categoria;
     private String cor;
 
-    public FigurinhasExtra(String nome, String  data, float altura, float peso, String posicao, String selecao, String categoria, String cor){
+    public FigurinhaExtra(String nome, String  data, float altura, float peso, String posicao, String selecao, String categoria, String cor){
         this.nome = nome;
         this.data = data;
         this.altura = altura;

@@ -1,39 +1,29 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args){
-        String nome, data, posicao, pais, categoria, cor, resp;
-        float altura, peso;
-        FigurinhasExtra especial;
-        Figurinhas normal;
-        Scanner sc = new Scanner(System.in);
+        String nome, data, posicao, pais, categoria, cor;
+        float altura=0, peso=0;
+        FigurinhaExtra especial;
+        Figurinha normal;
 
-        System.out.println("Trata-se de uma figurinha diferenciada? (y/n)");
-        resp = sc.nextLine();
-        System.out.println("Digite o nome da figurinha");
-        nome = sc.nextLine();
-        System.out.println("Data:");
-        data = sc.nextLine();
-        System.out.println("Altura");
-        altura = sc.nextFloat();
-        System.out.println("Peso");
-        peso = sc.nextFloat();
-        System.out.println("Posicao");
-        posicao = sc.nextLine();
-        System.out.println("pais");
-        pais = sc.nextLine();
+        nome = "Richarlisson";
+        data = "1/11/1111";
+        altura = 1.65f;
+        peso = 60.0f;
+        posicao = "Atacante";
+        pais = "brasil";
+        categoria = "Legends";
+        cor = "ouro";
+        especial = new FigurinhaExtra(nome, data, altura, peso, posicao, pais, categoria, cor);
+        especial.MostrarFigurinha();
 
-        if(resp == "y"){
-            System.out.println("Qual a categoria da figurinha?");
-            categoria = sc.nextLine();
-            System.out.println("Qual a cor da figurinha?");
-            cor = sc.nextLine();
-            especial = new FigurinhasExtra(nome, data, altura, peso, posicao, pais, categoria, cor);
-            especial.MostrarFigurinha();
-        }else{
-            normal = new Figurinhas(nome, data, altura, peso, posicao, pais);
-            normal.MostrarFigurinha();
-        }
+        nome = "Neymar";
+        data = "1/11/1111";
+        altura = 1.70f;
+        peso = 60.0f;
+        posicao = "Atacante";
+        pais = "Brasil";
+        normal = new Figurinha(nome, data, altura, peso, posicao, pais);
+        normal.MostrarFigurinha();
 
     }           
 }
