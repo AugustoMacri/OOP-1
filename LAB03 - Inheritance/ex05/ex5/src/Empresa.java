@@ -29,7 +29,7 @@ public class Empresa {
         Horista[] horistas = new Horista[5];
         for(i=0; i<5; i++){
             horistas[i] = new Horista("Horista", "1/1/1990", 0, 50, 160);
-            System.out.println(vendedores[i].salarioVendedor());
+            System.out.println(horistas[i].salarioHorista());
         }
     }
 }
