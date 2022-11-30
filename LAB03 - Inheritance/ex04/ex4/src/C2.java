@@ -16,6 +16,9 @@ public class C2 extends C1{
     }
 
     public void  mostar_atributos(){
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(super.getZ());
         System.out.println(a);
         System.out.println(b);
         System.out.println(c);
@@ -27,5 +30,15 @@ public class C2 extends C1{
         System.out.println(b);
         System.out.println(c);
     }
+
+    public int getC() {
+        return c;
+    }
+
+    public void setC(int c) {
+        this.c = c;
+    }
+
+    
 
 }

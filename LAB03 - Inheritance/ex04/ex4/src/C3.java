@@ -16,6 +16,12 @@ public class C3 extends C2{
     }
 
     public void  mostar_atributos(){
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(super.getZ());
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(super.getC());
         System.out.println(d);
         System.out.println(e);
         System.out.println(f);
