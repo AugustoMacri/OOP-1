@@ -9,8 +9,8 @@ public class C3 extends C2{
 
     public C3(int x, int y, int z, int a, int b, int c, int d, int e, int f){
         super(x, y, z, a, b, c);
-        this.d = e;
-        this.e = d;
+        this.d = d;
+        this.e = e;
         this.f = f;
         System.out.println("Classe C3: Chamada do construtor padrao, com parametros");
     }
@@ -18,10 +18,10 @@ public class C3 extends C2{
     public void  mostar_atributos(){
         System.out.println(x);
         System.out.println(y);
-        System.out.println(super.getZ());
+        System.out.println(getZ());
         System.out.println(a);
         System.out.println(b);
-        System.out.println(super.getC());
+        System.out.println(getC());
         System.out.println(d);
         System.out.println(e);
         System.out.println(f);
