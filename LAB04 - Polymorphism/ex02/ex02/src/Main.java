@@ -22,7 +22,7 @@ public class Main {
                 formas[i].obterArea();
                 System.out.println(formas[i]);
             }if(formas[i] instanceof FormaTridimensional){
-                formas[i].obterVolume();
+                ((FormaTridimensional)formas[i]).obterVolume();
                 formas[i].obterArea();
                 System.out.println(formas[i]);
             }
