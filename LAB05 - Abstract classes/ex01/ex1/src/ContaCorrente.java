@@ -1,4 +1,4 @@
-public abstract class ContaCorrente {
+public class ContaCorrente {
     private float saldo ;
     private int estado ; // 1= conta ativa 2= conta inativa
     private int numConta ;
