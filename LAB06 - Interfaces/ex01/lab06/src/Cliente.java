@@ -9,13 +9,14 @@ public class Cliente implements Classificavel{
     public boolean eMenorQue(Classificavel obj) {
         // TODO Auto-generated method stub
         Cliente compara = (Cliente) obj; //casting de "classificavel" para cliente 
-        if(this.nome < compara.nome){
+        
+        int res =  this.nome.compareTo(compara.nome);
+
+        if(res < 0){
             return true;
         }else{
             return false;
         }
-
-        return false;
     }
 
     public String getNome() {
