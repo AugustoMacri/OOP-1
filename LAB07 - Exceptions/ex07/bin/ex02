@@ -1,0 +1,17 @@
+a) Qual a diferença entre o throw e throws ? Justifique explicado o que cada comando faz
+Throws é usado quando nãose deseja que uma exceção seja tratada na propia classe ou método, mas sim em outro que venha lhe chamar. Para solucionar tal situação utilizamos o comando throws
+ na assinatura do método com a possível exceção que o mesmo poderá a vir lançar.
+Agora, o throw é utilizado quando é nescessário lançar uma exceção padrão ao invés de uma especifica. Para isso, utilizamos throw dentro de um bloco catch que desejamos converter a exceção
+
+b)Indique a diferença entre checked e uncheked exceptions
+Exceptions do tipo CHECKED sao aquelas em que você é obrigado a tratá-la, seja com um bloco try-catch ou mesmo com um throws.
+Por outro lado, quando vc rem uma exceção do tipo uncheked não é obrigatório o tratamento da mesma, voce pode tratar apenas se quiser,
+se sentir que é nescessario para o bom funcionamendo da aplicação
+
+Um exemplo seria:
+Criamos uma  Exception chamada "ValorPagamentoMenorTaxaEmbarqueException", isso significa que quando o valor do pagamento for menor que a da taxa de embarque você lançará uma exception da 
+forma que achar melhor.Tipo pedindo para o usuario aumentar o valor do pagamento. Essas são as Checked Exceptions, voce sabe que o erro podera ocorrer e ja sabe como corrigi-lo
+Outro exemplo:
+agora imagina um NullPointerException inesperado na sua aplicação. Esse erro não pode ser tratado, o erro ocorreu e pronto, você deve apenas mostrar uma mensagem ao usuário dizendo que o
+erro ocorreu, mas nada podera ser feito para corrigi-lo, se nao reiniciar todo o processamento. Essas são as Unchecked Exceptions, que geralmente são filhas da RuntimmeException, isso porque
+estas são excessoes que ocorrem em tempo de execução (runtime) e não em tempo de design.
